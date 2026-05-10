@@ -17,3 +17,8 @@ A sample project for learning API testing and CI/CD with Python and pytest.
 - Designed for hands-on practice
 - Keep tests simple and repeatable
 - Use CI pipelines to automate test runs
+
+## Completed Parts
+
+1. Understood how test discovery works in pytest
+2. 
