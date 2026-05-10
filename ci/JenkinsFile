@@ -1,0 +1,27 @@
+pipeline {
+    
+    agent any
+    
+    stages {
+        
+        stage('Checkout') {
+          steps {
+             git branch: 'main',
+               url: 'https://github.com/MTHUN021/ci_cd_api_pytest_handson'
+         }
+       }
+        
+        stage('Install requirements')
+        {
+            steps {
+                bat '"C:\\Users\\mithu\\Desktop\\ci_cd_api_pytest_handson\\ci_cd\\Scripts\\python.exe" -m pip install -r requirements.txt'
+            }
+        }
+        stage('Run test')
+        {
+            steps {
+                bat '"C:\\Users\\mithu\\Desktop\\ci_cd_api_pytest_handson\\ci_cd\\Scripts\\python.exe" -m pytest'
+            }
+        }
+    }
+}
